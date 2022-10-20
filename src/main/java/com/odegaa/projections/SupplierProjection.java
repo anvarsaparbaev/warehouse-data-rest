@@ -5,4 +5,5 @@ import org.springframework.data.rest.core.config.Projection;
 
 @Projection(types = Supplier.class)
 public interface SupplierProjection {
+
 }
