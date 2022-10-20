@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource(excerptProjection = OutputProductsProjection.class)
+@RepositoryRestResource(excerptProjection = OutputProductsProjection.class,path = "outputproduct")
 public interface OutputProductsRepository extends JpaRepository<OutputProducts, Long> {
 
 

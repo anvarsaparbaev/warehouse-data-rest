@@ -5,7 +5,7 @@ import com.odegaa.projections.AttachmentProjection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(excerptProjection = AttachmentProjection.class)
+@RepositoryRestResource(excerptProjection = AttachmentProjection.class,path = "attachment")
 public interface AttachmentRepository extends JpaRepository<Attachment, Long> {
 
 }
