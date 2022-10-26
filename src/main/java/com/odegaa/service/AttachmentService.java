@@ -1,10 +1,10 @@
-package uz.data.warehousemarket.service;
+package com.odegaa.service;
 
+import com.odegaa.models.Attachment;
+import com.odegaa.repositories.AttachmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import uz.data.warehousemarket.entity.Attachment;
 import uz.data.warehousemarket.payload.Result;
-import uz.data.warehousemarket.repository.AttachmentRepository;
 
 import java.util.List;
 import java.util.Optional;

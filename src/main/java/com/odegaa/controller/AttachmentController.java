@@ -1,10 +1,10 @@
-package uz.data.warehousemarket.controller;
+package com.odegaa.controller;
 
+import com.odegaa.models.Attachment;
+import com.odegaa.service.AttachmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import uz.data.warehousemarket.entity.Attachment;
 import uz.data.warehousemarket.payload.Result;
-import uz.data.warehousemarket.service.AttachmentService;
 
 @RestController
 @RequestMapping("/attachment")

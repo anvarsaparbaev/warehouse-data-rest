@@ -1,17 +1,15 @@
-package uz.data.warehousemarket.service;
+package com.odegaa.service;
 
+import com.odegaa.models.Attachment;
+import com.odegaa.models.AttachmentContent;
+import com.odegaa.models.payload.Result;
+import com.odegaa.repositories.AttachmentContentRepository;
+import com.odegaa.repositories.AttachmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileCopyUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import uz.data.warehousemarket.entity.Attachment;
-import uz.data.warehousemarket.entity.AttachmentContent;
-import uz.data.warehousemarket.payload.Result;
-import uz.data.warehousemarket.repository.AttachmentContentRepository;
-import uz.data.warehousemarket.repository.AttachmentRepository;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -35,7 +33,7 @@ public class AttachmentContentService {
             if(attachmentContentByAttachment_id.isPresent()){
                 AttachmentContent attachmentContent = attachmentContentByAttachment_id.get();
                 response.setHeader("Content-Disposiotion",
-                        "attachment; filename=\""+attachment.getName()+"\"");
+                        "attachment; filename=\""+attachment.getOriginalName()+"\"");
                 response.setContentType(attachment.getContentType());
                 FileCopyUtils.copy(attachmentContent.getBytes(),response.getOutputStream());
             }

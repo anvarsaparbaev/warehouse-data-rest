@@ -16,15 +16,12 @@ public class Attachment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String originalName;
 
     private long size;
 
     private String contentType;
-
-    @Column(nullable = false, unique = true)
-    private String generationName;
 
 }

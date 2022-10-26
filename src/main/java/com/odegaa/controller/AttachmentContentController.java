@@ -1,10 +1,10 @@
-package uz.data.warehousemarket.controller;
+package com.odegaa.controller;
 
+import com.odegaa.models.payload.Result;
+import com.odegaa.service.AttachmentContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import uz.data.warehousemarket.payload.Result;
-import uz.data.warehousemarket.service.AttachmentContentService;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
